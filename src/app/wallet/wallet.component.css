@@ -1,0 +1,13 @@
+.container-fluid {
+    padding: 20px;
+    background-color: #004f9e;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.padding {
+    margin: 60px 25px 60px 25px !important;
+}

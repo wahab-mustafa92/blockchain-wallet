@@ -1,0 +1,53 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+    <div style="width:600px">
+        <div class="row m-2">
+            <div class="col-md-12">
+                <h2 mat-dialog-title>Receiver</h2>
+            </div>
+
+            <div class="col-md-6">
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <mat-select formControlName="address">
+                        <mat-option value="boa1456fjknd12345345908nnn1324234">boa1456fjknd12345345908nnn1324234
+                        </mat-option>
+                        <mat-option value="1324234nnnfjknd12345345908boa1456">1324234nnnfjknd12345345908boa1456
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field floatLabel="always">
+                    <mat-label>Amount</mat-label>
+                    <input matInput type="number" class="" formControlName="amount" min="0" placeholder="0">
+                    <span matSuffix>BOA</span>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+                <mat-form-field>
+                    <mat-label>Option</mat-label>
+                    <mat-select formControlName="option">
+                        <mat-option value="Easy">Easy</mat-option>
+                        <mat-option value="Medium">Medium</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field floatLabel="always">
+                    <mat-label>Fee</mat-label>
+                    <input matInput type="number" class="" formControlName="fee" min="0" placeholder="0">
+                    <span matSuffix>BOA</span>
+                </mat-form-field>
+            </div>
+
+            <div mat-dialog-actions>
+                <span>
+                    <app-button class="submit" [btnWidth]="btnWidth" [btnText]="btnText" [mat-dialog-close]="formGroup.value"></app-button>
+                    <app-button class="ml-1" [btnWidth]="cancelBtnWidth" [btnText]="cancelBtnText" 
+                        (click)="CloseDialog()"></app-button>
+                </span>
+            </div>
+        </div>
+    </div>
+</form>

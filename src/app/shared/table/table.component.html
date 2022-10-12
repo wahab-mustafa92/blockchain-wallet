@@ -1,0 +1,39 @@
+<table class="mt-4" mat-table [dataSource]="data">
+    <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element"> <span>
+                <img src="assets/bank.png" alt="Loading">
+                {{element.address}}
+            </span> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> Drawn </th>
+        <td mat-cell *matCellDef="let element"> {{element.drawn}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="studentEmail">
+        <th mat-header-cell *matHeaderCellDef> Remaining </th>
+        <td mat-cell *matCellDef="let element"> {{element.remaining }} </td>
+    </ng-container>
+    <ng-container matColumnDef="registrationNumber">
+        <th mat-header-cell *matHeaderCellDef> Spendable Balance </th>
+        <td mat-cell *matCellDef="let element"> {{element.spendableBalance}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="course">
+        <th mat-header-cell *matHeaderCellDef> Balance </th>
+        <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+            <mat-icon>delete_forever</mat-icon>
+        </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; let odd = odd;  columns: columns; " [ngClass]="{gray: odd}"></tr>
+</table>

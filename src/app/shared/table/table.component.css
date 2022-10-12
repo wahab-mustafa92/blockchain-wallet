@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    font-weight: 600;
+    background-color: #f5f5f5;
+}
+.mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+.gray {
+    background-color: #f5f5f5;
+}
